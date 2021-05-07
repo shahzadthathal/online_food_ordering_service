@@ -24,7 +24,8 @@ Pass: password
 ```
 
 3. API's
-Postman.jso files is attached in doc folder.
+
+Postman.json file is attached in doc folder.
 
 ```
 http://127.0.0.1:8000/api/menu
@@ -32,8 +33,10 @@ http://127.0.0.1:8000/api/menu/item
 http://127.0.0.1:8000/api/menu/item/category
 ```
 
-4. Tests
-Open a new terminal and run this command to check if web and api's are working.
+4. Run Tests
+
+Open a new terminal and run this command to check if web and api's endpoints are working.
+
 ```
 php artisan test
 ```
