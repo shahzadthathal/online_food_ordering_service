@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="col-md-9">
+<div class="col-md-10">
     <h2>Add Menu Item</h2>
 
     <form method="post" action="{{route('menuitems.store')}}" enctype="multipart/form-data">

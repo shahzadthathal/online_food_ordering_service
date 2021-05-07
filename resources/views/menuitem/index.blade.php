@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="col-md-9">
+<div class="col-md-10">
     <h2>Manage Menu Items</h2>
     <a class="btn btn-primary mb-2" href="{{ route('menuitems.create') }}" role="button">Add Menu Item</a>
     
@@ -19,6 +19,7 @@
         <thead>
             <tr>
                 <th scope="col">#</th>
+                <th scope="col">Image</th>
                 <th scope="col">Title</th>
                 <th scope="col">Status</th>
                 <th scope="col">Actions</th>
@@ -28,6 +29,7 @@
             @foreach ($records as $record)
                 <tr>
                     <th scope="row">{{ $record->id }}</th>
+                    <td><img src="{{url($record->image)}}" width="120" height="100"/></td>
                     <td>{{ $record->title }}</td>
                     <td>{{ $record->status == 1 ? 'Active' :"In Active" }}</td>
                     <td>

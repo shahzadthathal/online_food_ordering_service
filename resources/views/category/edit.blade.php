@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="col-md-9">
+<div class="col-md-10">
     <h2>Add Category</h2>
 
     <form method="POST" action="{{ route('category.update',$record->id) }}">

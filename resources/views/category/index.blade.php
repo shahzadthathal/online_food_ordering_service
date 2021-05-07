@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="col-md-9">
+<div class="col-md-10">
     <h2>Manage Categories</h2>
     <a class="btn btn-primary mb-2" href="{{ route('category.create') }}" role="button">Add Menu Item Category</a>
     

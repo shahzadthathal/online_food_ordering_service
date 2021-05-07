@@ -80,7 +80,7 @@
             <div class="container">
                 <div class="row justify-content-center">
                     @auth
-                    <div class="col-md-3 bg-white">
+                    <div class="col-md-2 bg-white">
                         <nav class="navbar navbar-default" role="navigation">
                             <div class="side-menu-container">
                                 <ul class="nav navbar-nav">
