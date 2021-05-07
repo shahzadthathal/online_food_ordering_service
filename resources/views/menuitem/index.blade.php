@@ -18,10 +18,11 @@
     <table class="table table-hover bg-white">
         <thead>
             <tr>
-                <th scope="col">#</th>
+                <th scope="col">@sortablelink('id')</th>
                 <th scope="col">Image</th>
-                <th scope="col">Title</th>
-                <th scope="col">Status</th>
+                <th scope="col">@sortablelink('title')</th>
+                <th scope="col">@sortablelink('status')</th>
+                <th scope="col">@sortablelink('created_at')</th>
                 <th scope="col">Actions</th>
             </tr>
         </thead>
@@ -32,11 +33,12 @@
                     <td><img src="{{url($record->image)}}" width="120" height="100"/></td>
                     <td>{{ $record->title }}</td>
                     <td>{{ $record->status == 1 ? 'Active' :"In Active" }}</td>
+                    <td>{{ $record->created_at }}</td>
                     <td>
                         <div class="d-flex flex-row">
                             <a class="btn btn-warning btn-sm mr-2" href="{{ route('menuitems.show',$record->id) }}" role="button">Detail</a>
                             <a class="btn btn-dark btn-sm mr-2" href="{{ route('menuitems.edit',$record->id) }}" role="button">Edit</a>
-                            <form id="form_{{$record->id}}" action="{{ route('menuitems.destroy',$record->id) }}" method="POST">
+                            <form style="display:inline-block" id="form_{{$record->id}}" action="{{ route('menuitems.destroy',$record->id) }}" method="POST">
                                 @csrf
                                 @method('DELETE')
                                 <button onclick="deleteItem(`{{$record->id}}`)" type="button" class="btn btn-danger btn-sm">Delete</button>

@@ -21,7 +21,7 @@ class MenuItemController extends Controller
 
     public function index()
     {
-        $records = Model::orderBy('id','desc')->paginate(20)->withQueryString();
+        $records = Model::sortable()->paginate(20)->withQueryString();
 
         return view('menuitem.index', [
             'records' => $records

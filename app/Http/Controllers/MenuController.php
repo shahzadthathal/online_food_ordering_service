@@ -20,7 +20,7 @@ class MenuController extends Controller
 
     public function index()
     {
-        $records = Model::orderBy('id','desc')->paginate(10)->withQueryString();
+        $records = Model::sortable()->paginate(10)->withQueryString();
 
         return view('menu.index', [
             'records' => $records

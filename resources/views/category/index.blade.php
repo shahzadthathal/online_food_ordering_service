@@ -18,9 +18,10 @@
     <table class="table table-hover bg-white">
         <thead>
             <tr>
-                <th scope="col">#</th>
-                <th scope="col">Title</th>
-                <th scope="col">Status</th>
+            <th scope="col">@sortablelink('id')</th>
+                <th scope="col">@sortablelink('title')</th>
+                <th scope="col">@sortablelink('status')</th>
+                <th scope="col">@sortablelink('created_at')</th>
                 <th scope="col">Actions</th>
             </tr>
         </thead>
@@ -30,11 +31,12 @@
                     <th scope="row">{{ $record->id }}</th>
                     <td>{{ $record->title }}</td>
                     <td>{{ $record->status == 1 ? 'Active' :"In Active" }}</td>
+                    <td>{{ $record->created_at }}</td>
                     <td>
                         <div class="d-flex flex-row">
                             <a class="btn btn-warning btn-sm mr-2" href="{{ route('category.show',$record->id) }}" role="button">Detail</a>
                             <a class="btn btn-dark btn-sm mr-2" href="{{ route('category.edit',$record->id) }}" role="button">Edit</a>
-                            <form id="form_{{$record->id}}" action="{{ route('category.destroy',$record->id) }}" method="POST">
+                            <form style="display:inline-block" id="form_{{$record->id}}" action="{{ route('category.destroy',$record->id) }}" method="POST">
                                 @csrf
                                 @method('DELETE')
                                 <button onclick="deleteItem(`{{$record->id}}`)" type="button" class="btn btn-danger btn-sm">Delete</button>
