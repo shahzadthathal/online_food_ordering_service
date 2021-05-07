@@ -1,0 +1,67 @@
+{
+	"variables": [],
+	"info": {
+		"name": "online_food_ordering_service",
+		"_postman_id": "fb17ffaa-e05e-1991-5e6b-914f24576d0e",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://127.0.0.1:8000/api/menu?page=2",
+			"request": {
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/menu?page=2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"menu"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "2",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/menu/item",
+			"request": {
+				"url": "http://127.0.0.1:8000/api/menu/item",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/menu/item/category",
+			"request": {
+				"url": "http://127.0.0.1:8000/api/menu/item/category",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
