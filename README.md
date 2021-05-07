@@ -6,7 +6,7 @@ cd online_food_ordering_service
 
 composer install
 
-Update database credentials in .env file
+Copy .env.example to .env and update database credentials in .env file
 
 php artisan migrate
 
