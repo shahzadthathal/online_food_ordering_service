@@ -21,8 +21,12 @@ class MenuItemCategoryFactory extends Factory
      */
     public function definition()
     {
+        $title = $this->faker->name();
         return [
-            //
+            'title' => $title,
+            'slug' => str_replace([' ', '.', "'",'--'], '-', strtolower($title)),
+            'created_at' => now(),
+            'status' => 1,
         ];
     }
 }

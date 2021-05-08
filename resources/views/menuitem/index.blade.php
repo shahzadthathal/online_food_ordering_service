@@ -21,6 +21,8 @@
                 <th scope="col">@sortablelink('id')</th>
                 <th scope="col">Image</th>
                 <th scope="col">@sortablelink('title')</th>
+                <th scope="col">Menu</th>
+                <th scope="col">Categories</th>
                 <th scope="col">@sortablelink('status')</th>
                 <th scope="col">@sortablelink('created_at')</th>
                 <th scope="col">Actions</th>
@@ -32,6 +34,12 @@
                     <th scope="row">{{ $record->id }}</th>
                     <td><img src="{{url($record->image)}}" width="120" height="100"/></td>
                     <td>{{ $record->title }}</td>
+                    <td><span class="badge badge-secondary">{{$record->menu->title}}</span></td>
+                    <td>
+                    @foreach($record->categories as $category)
+                        <span class="badge badge-success">{{ $category->title}}</span>
+                    @endforeach
+                    </td>
                     <td>{{ $record->status == 1 ? 'Active' :"In Active" }}</td>
                     <td>{{ $record->created_at }}</td>
                     <td>

@@ -40,3 +40,5 @@ Open a new terminal and run this command to check if web and api's endpoints are
 ```
 php artisan test
 ```
+
+![alt text](https://github.com/shahzadthathal/online_food_ordering_service/blob/main/Online-Food-Ordering-Service.png?raw=true)
